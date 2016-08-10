@@ -14,6 +14,7 @@ class HtmlEditorField_LinkFormUploadField extends Extension
 
         $fileField = UploadField::create('file', _t('HtmlEditorField.FILE', 'File'))
             ->setAllowedMaxFileNumber(1)
+            ->useMultisitesFolder()
             ->setForm($form);
 
         $form->Fields()->insertAfter($fileField, 'email');
